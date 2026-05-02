@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Gbox - Store</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <script>
+        if (!sessionStorage.getItem('user')) {
+            window.location.href = 'index.html'; // Đuổi về trang login
+        }
+    </script>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container">
+            <a href="store.html" class="logo-link">
+                <img src="../logo.jpg" alt="Gbox Logo" class="logo-img">
+            </a>
+            
+            <div class="user-actions">
+                Chào, <span id="display-user" style="color: white; font-weight: bold;"></span>
+                <a href="#" onclick="logout()">[ Đăng xuất ]</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="store.html" class="active">STORE</a> | 
+            <a href="community.html">COMMUNITY</a> | 
+            <a href="#">ABOUT</a> | 
+            <a href="support.html">SUPPORT</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="banner">
+            <div class="banner-title">Black Myth: Wukong - Đang thịnh hành</div>
+        </div>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <h3>Thể loại</h3>
+                <ul>
+                    <li><a href="#">Hành động</a></li>
+                    <li><a href="#">Đua xe</a></li>
+                    <li><a href="#">Thẻ bài</a></li>
+                    <li><a href="#">Trang điểm</a></li>
+                    <li><a href="#">Thú cưng</a></li>
+                    <li><a href="#">Kinh dị</a></li>
+                    <li><a href="#">Sinh tồn</a></li>
+                </ul>
+            </aside>
+
+            <section class="game-section">
+                <h3 class="section-title">Chỗ chọn game</h3>
+                
+                <div class="game-grid">
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/header.jpg" alt="CS2">
+                        <div class="game-info">
+                            <div class="game-name">Counter-Strike 2</div>
+                            <div class="game-price">Miễn phí</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/header.jpg" alt="Dota 2">
+                        <div class="game-info">
+                            <div class="game-name">Dota 2</div>
+                            <div class="game-price">Miễn phí</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/header.jpg" alt="PUBG">
+                        <div class="game-info">
+                            <div class="game-name">PUBG: BATTLEGROUNDS</div>
+                            <div class="game-price">Miễn phí</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg" alt="Wukong">
+                        <div class="game-info">
+                            <div class="game-name">Black Myth: Wukong</div>
+                            <div class="game-price">1.299.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg" alt="GTA V">
+                        <div class="game-info">
+                            <div class="game-name">Grand Theft Auto V</div>
+                            <div class="game-price">450.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg" alt="Elden Ring">
+                        <div class="game-info">
+                            <div class="game-name">ELDEN RING</div>
+                            <div class="game-price">1.390.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/header.jpg" alt="Baldur's Gate 3">
+                        <div class="game-info">
+                            <div class="game-name">Baldur's Gate 3</div>
+                            <div class="game-price">990.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077">
+                        <div class="game-info">
+                            <div class="game-name">Cyberpunk 2077</div>
+                            <div class="game-price">990.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg" alt="Stardew Valley">
+                        <div class="game-info">
+                            <div class="game-name">Stardew Valley</div>
+                            <div class="game-price">165.000₫</div>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/550/header.jpg" alt="L4D2">
+                        <div class="game-info">
+                            <div class="game-name">Left 4 Dead 2</div>
+                            <div class="game-price">142.000₫</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Slogan: niềm vui của bn là đồng tiền của chúng tôi</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('display-user').innerText = sessionStorage.getItem('user');
+        
+        function logout() {
+            sessionStorage.removeItem('user'); // Xóa bộ nhớ
+            window.location.href = 'index.html'; // Quay lại form login
+        }
+    </script>
+</body>
+</html>
